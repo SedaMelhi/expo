@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 20px;
+}
+body, p, h1, h2, h3, h4, h5, h6, ul, li, option{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+body{
+    background-color: rgba(20, 20, 20, 1);
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+.wrap{
+    max-width: 1296px;
+    padding: 0 48px;
+    margin: 0 auto;
+}

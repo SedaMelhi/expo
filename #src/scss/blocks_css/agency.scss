@@ -1,0 +1,24 @@
+.title{
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+}
+.agency{
+    margin-top: 220px;
+    &__block{
+        display: flex;
+        padding: 70px 0;
+        border-top: 1px solid #242424;
+        border-bottom: 1px solid #242424;
+        margin-top: 48px;
+        justify-content: space-between;
+    }
+    &__description{
+        max-width: 680px;
+        line-height: 1.6rem;
+    }
+    &__data{
+        color:  #828282;
+        line-height: 1.6rem;
+    }
+}
