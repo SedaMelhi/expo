@@ -5,6 +5,11 @@
 }
 .agency{
     margin-top: 220px;
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     &__block{
         display: flex;
         padding: 70px 0;
@@ -15,10 +20,57 @@
     }
     &__description{
         max-width: 680px;
+        margin: 0 100px;
         line-height: 1.6rem;
     }
     &__data{
         color:  #828282;
         line-height: 1.6rem;
+        &_mobile{
+            display: none;
+        }
+    }
+}
+
+@media screen and(max-width: 768px) {
+    .agency{
+        &__data{
+            display: none;
+            &_mobile{
+                display: block;
+            }
+        }
+        &__description{
+            margin: 0 0 0 80px;
+        }
+    }
+    .title{
+        font-size: 28px;
+    }
+}
+
+@media screen and(max-width: 575px) {
+    .agency{
+        &__data{
+            display: block;
+            &_mobile{
+                display: none;
+            }
+        }
+        &__block{
+            flex-direction: column;
+        }
+        &__description{
+            margin: 16px 0;
+        }
+    }
+    .title{
+        font-size: 20px;
+    }
+}
+
+@media screen and(max-width: 500px) {
+    .agency{
+        margin-top: 70px;
     }
 }
