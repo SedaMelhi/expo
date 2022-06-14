@@ -156,7 +156,7 @@ header{
     svg{
         width: 112px;
     }
-    bottom: 60px;
+   
     left: 80px;
     position: absolute;
 }
@@ -211,6 +211,8 @@ header{
         }
     }
     .header{
+        height: calc(100% - 100px);
+        justify-content: flex-start;
         &__title{
             svg{
                 width: 498px;
@@ -240,9 +242,11 @@ header{
     }
     
 }
+.circle__wrap{
+    position: relative;
+}
 @media screen and(max-width: 610px) {
     .circle{
-        bottom: 10px;
         svg{
             view-box: 0 0 50px 50px;
         }
@@ -250,12 +254,12 @@ header{
     .header{
         &__title{
             svg{
-                width: 350px;
+                width: 450px;
             }
         }
     }
     .slider__wrap{
-        width: 170px;
+        width: 212px;
     }
     .blur-block{
         width: 90px;

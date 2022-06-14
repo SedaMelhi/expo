@@ -344,7 +344,6 @@ header {
 }
 
 .circle {
-  bottom: 60px;
   left: 80px;
   position: absolute;
 }
@@ -393,6 +392,10 @@ header {
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
   border-radius: 50%;
+}
+
+.circle__wrap {
+  position: relative;
 }
 
 .btn_mobile {
@@ -651,6 +654,10 @@ header {
 }
 
 @media screen and (max-width: 880px) {
+  nav {
+    height: 100px;
+  }
+
   .slider__wrap {
     width: 233px;
   }
@@ -661,6 +668,13 @@ header {
 
   .swiper img {
     width: 100%;
+  }
+
+  .header {
+    height: calc(100% - 100px);
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 
   .header__title svg {
@@ -811,20 +825,16 @@ header {
 }
 
 @media screen and (max-width: 610px) {
-  .circle {
-    bottom: 10px;
-  }
-
   .circle svg {
     view-box: 0 0 50px 50px;
   }
 
   .header__title svg {
-    width: 350px;
+    width: 450px;
   }
 
   .slider__wrap {
-    width: 170px;
+    width: 212px;
   }
 
   .blur-block {
