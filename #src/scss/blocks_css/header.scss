@@ -1,13 +1,13 @@
 header{
     height: 100vh;
-    min-height: 751px;
+    
 }
 .square{
     top: 0;
     left: 0;
     position: absolute;
     width: 100%;
-    min-height: 628px; 
+   
     height: 100%;
     overflow: hidden; 
     &__line{
@@ -33,7 +33,7 @@ header{
 }
 .header{
     max-width: 1074px;
-    min-height: 628px;
+   
     height: calc(100% - 140px);
     display: flex;
     flex-direction: column;
@@ -58,7 +58,7 @@ header{
         z-index: 2;
     }
    &__wrap{
-        min-height: 628px;
+      
         height: calc(100% - 100px);
         width: 100%;
         position: relative;
@@ -200,10 +200,7 @@ header{
 }
 
 @media screen and(max-width: 880px) {
-    header{
-        height:  100%;
-        min-height: 100%;
-    }
+   
     .slider__wrap{
         width: 233px;
     }
@@ -214,12 +211,6 @@ header{
         }
     }
     .header{
-        height: 449px;
-        min-height: 449px;
-        &__wrap{
-            height: 100%;
-            min-height: 100%;
-        }
         &__title{
             svg{
                 width: 498px;
@@ -247,27 +238,14 @@ header{
             height: 81px;
         }
     }
-    .square{
-        min-height: 100%;
-        height: 100%;
-    }
+    
 }
 @media screen and(max-width: 610px) {
-    .header{
-        height: 350px;
-        min-height: 350px;
-        &__wrap{
-            min-height: 100%;
-        }
-    }
     .circle{
         bottom: 10px;
         svg{
             view-box: 0 0 50px 50px;
         }
-    }
-    .square{
-        min-height: 100%;
     }
     .header{
         &__title{
@@ -299,34 +277,43 @@ header{
 }
 @media screen and(max-width: 510px) {
     .header{
-        height: 219px;
-        min-height: 219px;
-        &__wrap{
-            min-height: 219px;
-        }
+        
         &__title{
             svg{
-                width: 249px;
+                width: 290px;
+            }
+            path:nth-child(8){
+                fill: none;
+            }
+            path:nth-child(9){
+                fill: none;
+            }
+            path:nth-child(19){
+                fill: none;
+            }
+            path:nth-child(20){
+                fill: none;
+            }
+            path:nth-child(21){
+                fill: none;
             }
         }
-    }
-    .square{
-        min-height: 219px;
+        
     }
     .circle{
         svg{
-            width: 43px;
+            width: 50px;
         }
         &__blur{
-            width: 39px;
-            height: 39px;
+            width: 45px;
+            height: 45px;
             top: 7px;
             left: 10px;
         }
     }
     .swiper-pagination-bullet{
-        height: 8px;
-        width: 4px;
+        height: 11px;
+        width: 7px;
     }
     .swiper-pagination{
         margin-top: 13px;
@@ -335,15 +322,15 @@ header{
         margin-right: 15px!important;
     }
     .blur-block{
-        width: 57px;
-        height: 31px;
+        width: 74px;
+        height: 37px;
         right: -10px;
     }
     .slider__wrap{
-        width: 114px;
+        width: 169px;
         right: -4px;
     }
     .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
-        margin: 0 2px;
+        margin: 0 2.5px;
     }
 }

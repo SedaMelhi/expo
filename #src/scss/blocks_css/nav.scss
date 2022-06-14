@@ -75,6 +75,22 @@ nav{
         margin: 32px auto 0;
     }
 }
+@media screen and(max-width: 450px) {
+    html{
+        font-size: 14px;
+    }
+    .logo{
+        img{
+            width: 115px;
+        }
+    }
+    nav{
+        height: 80px;
+    }
+    .header{
+        height: calc(100% - 240px);
+    }
+}
 @media screen and(max-width: 400px) {
     .menu{
         display: none;
@@ -83,15 +99,5 @@ nav{
         display: block;
         width: calc(100% - 72px);
         margin: 32px auto 0;
-    }
-}
-@media screen and(max-width: 450px) {
-    html{
-        font-size: 14px;
-    }
-    .logo{
-        img{
-            width: 101px;
-        }
     }
 }
