@@ -211,7 +211,7 @@ header{
         }
     }
     .header{
-        height: calc(100% - 100px);
+       
         justify-content: flex-start;
         &__title{
             svg{
@@ -280,11 +280,20 @@ header{
     display: none;
 }
 @media screen and(max-width: 510px) {
+    .wrap{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    
     .header{
-        
+        &__wrap{
+            height: calc(100vh - 60px);
+            padding: 0 24px;
+        }
+        height: 100%;
         &__title{
             svg{
-                width: 290px;
+                width: 100%;
             }
             path:nth-child(8){
                 fill: none;
@@ -305,15 +314,8 @@ header{
         
     }
     .circle{
-        svg{
-            width: 50px;
-        }
-        &__blur{
-            width: 45px;
-            height: 45px;
-            top: 7px;
-            left: 10px;
-        }
+        left: 10px;
+       
     }
     .swiper-pagination-bullet{
         height: 11px;
@@ -331,7 +333,7 @@ header{
         right: -10px;
     }
     .slider__wrap{
-        width: 169px;
+        width: 59%;
         right: -4px;
     }
     .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{

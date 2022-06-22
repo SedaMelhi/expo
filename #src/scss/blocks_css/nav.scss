@@ -86,7 +86,7 @@ nav{
     }
     .logo{
         img{
-            width: 115px;
+            width: 130px;
         }
     }
     nav{
@@ -96,7 +96,7 @@ nav{
         height: calc(100% - 240px);
     }
 }
-@media screen and(max-width: 400px) {
+@media screen and(max-width: 420px) {
     .menu{
         display: none;
     }
@@ -104,5 +104,6 @@ nav{
         display: block;
         width: calc(100% - 72px);
         margin: 32px auto 0;
+        font-size: 1.1rem;
     }
 }
