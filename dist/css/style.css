@@ -132,6 +132,7 @@ nav {
 
 header {
   height: 100vh;
+  min-height: 750px;
 }
 
 .square {
@@ -219,6 +220,7 @@ header {
 }
 
 .header__wrap {
+  overflow: hidden;
   height: calc(100% - 100px);
   width: 100%;
   position: relative;
@@ -671,9 +673,7 @@ header {
   }
 
   .header {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    height: calc(100% - 117px);
   }
 
   .header__title svg {
@@ -823,6 +823,12 @@ header {
   }
 }
 
+@media screen and (max-width: 650px) {
+  .slider__wrap {
+    right: 35px;
+  }
+}
+
 @media screen and (max-width: 610px) {
   .circle svg {
     view-box: 0 0 50px 50px;
@@ -833,7 +839,7 @@ header {
   }
 
   .slider__wrap {
-    width: 212px;
+    width: 220px;
   }
 
   .blur-block {
@@ -888,17 +894,21 @@ header {
 }
 
 @media screen and (max-width: 510px) {
+  header {
+    min-height: 650px;
+  }
+
   .wrap {
     padding-left: 24px;
     padding-right: 24px;
   }
 
   .header {
-    height: 100%;
+    height: calc(100% - 225px);
   }
 
   .header__wrap {
-    height: calc(100vh - 60px);
+    height: calc(100% - 60px);
     padding: 0 24px;
   }
 
@@ -950,7 +960,7 @@ header {
   }
 
   .slider__wrap {
-    width: 59%;
+    width: 56%;
     right: -4px;
   }
 

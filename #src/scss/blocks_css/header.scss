@@ -1,6 +1,6 @@
 header{
     height: 100vh;
-    
+    min-height: 750px;
 }
 .square{
     top: 0;
@@ -58,7 +58,7 @@ header{
         z-index: 2;
     }
    &__wrap{
-      
+        overflow: hidden;
         height: calc(100% - 100px);
         width: 100%;
         position: relative;
@@ -212,7 +212,7 @@ header{
     }
     .header{
        
-        justify-content: flex-start;
+        height: calc(100% - 117px);
         &__title{
             svg{
                 width: 498px;
@@ -245,6 +245,12 @@ header{
 .circle__wrap{
     position: relative;
 }
+@media screen and(max-width: 650px){
+    .slider__wrap{
+        right: 35px;
+        
+    }
+}
 @media screen and(max-width: 610px) {
     .circle{
         svg{
@@ -259,7 +265,7 @@ header{
         }
     }
     .slider__wrap{
-        width: 212px;
+        width: 220px;
     }
     .blur-block{
         width: 90px;
@@ -280,6 +286,9 @@ header{
     display: none;
 }
 @media screen and(max-width: 510px) {
+    header{
+        min-height: 650px;
+    }
     .wrap{
         padding-left: 24px;
         padding-right: 24px;
@@ -287,10 +296,10 @@ header{
     
     .header{
         &__wrap{
-            height: calc(100vh - 60px);
+            height: calc(100% - 60px);
             padding: 0 24px;
         }
-        height: 100%;
+        height: calc(100% - 225px);
         &__title{
             svg{
                 width: 100%;
@@ -333,7 +342,7 @@ header{
         right: -10px;
     }
     .slider__wrap{
-        width: 59%;
+        width: 56%;
         right: -4px;
     }
     .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{

@@ -13,7 +13,7 @@ const swiper = new Swiper('.swiper', {
   effect: "cube",
   cubeEffect: {
     shadow: false,
-  }
+  },
 })
 
 const dots = document.querySelectorAll('.swiper-pagination-bullet');
