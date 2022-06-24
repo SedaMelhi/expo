@@ -1,0 +1,121 @@
+.window{
+    width: 430px;
+    position: absolute;
+    left: 120px;
+    top: -60px;
+    border: 1px solid #242424;
+    background: #161616;
+    &__top{
+        display: flex;
+        padding: 12px 16px;
+        border-bottom: 1px solid #242424;
+    }
+    &__circle{
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 8px;
+        &_red{
+            background: #EB5757;
+        }
+        &_yellow{
+            background: #F2C94C;
+        }
+        &_green{
+            background: #27AE60;
+        }
+    }
+    &__title{
+        padding: 20px 32px;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+}
+.focus__wrap{
+    position: relative;
+    max-width: 1440px;
+    margin: 200px auto 180px;
+}
+
+.focus{
+    padding: 102px 120px 100px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-x: hidden;
+    &__bg{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background: url(./../img/block.png) no-repeat bottom/100% 100%;
+        z-index: -1;
+        margin: 0 auto;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    &__item{
+        width: 48.5%;
+        margin-top: 48px;
+    }
+    &__subtitle{
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        margin-bottom: 16px;
+    }
+    &__description{
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        color: #828282;
+    }
+}
+
+@media screen and(max-width: 1000px) {
+    .focus{
+        flex-direction: column;
+        padding: 95px 48px;
+        &__item{
+            width: 100%;
+            margin-top: 32px;
+        }
+    }
+}
+
+@media screen and(max-width: 700px) {
+    .window{
+        width: calc(100% - 64px);
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+}
+@media screen and(max-width: 450px) {
+    .window{
+        &__title{
+            font-size: 20px;
+        }
+        &__bottom{
+            padding: 16px 24px;
+        }
+    }
+    .focus{
+        padding: 80px 32px 63px;
+        &__item{
+            
+            margin-top: 8px;
+        }
+    }
+}
+@media screen and(max-width: 379px) {
+    .window{
+        &__title{
+            font-size: 18px;
+        }
+        &__bottom{
+            padding: 16px;
+        }
+    }
+}
