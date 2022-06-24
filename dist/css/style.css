@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap");
+
 @font-face {
   font-family: "Poppins";
   src: url(../fonts/Poppins-Regular.woff2);
@@ -71,7 +73,7 @@ body {
 }
 
 .wrap {
-  max-width: 1296px;
+  max-width: 1440px;
   padding: 0 48px;
   margin: 0 auto;
 }
@@ -132,7 +134,7 @@ nav {
 
 header {
   height: 100vh;
-  min-height: 750px;
+  min-height: 800px;
 }
 
 .square {
@@ -177,8 +179,8 @@ header {
 }
 
 .header {
-  max-width: 1074px;
-  height: calc(100% - 140px);
+  max-width: 1280px;
+  height: calc(100% - 123px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,7 +198,6 @@ header {
 }
 
 .header__content {
-  max-width: 752px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,6 +235,11 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.header__title svg {
+  width: 900px;
+  margin: 0 auto;
 }
 
 .header__title path {
@@ -280,7 +286,11 @@ header {
   position: absolute;
   z-index: 1;
   right: -20px;
-  width: 333px;
+  width: 400px;
+}
+
+.slider__wrap img {
+  width: 100%;
 }
 
 .slider {
@@ -290,7 +300,7 @@ header {
 }
 
 .swiper {
-  width: 333px;
+  width: 400px;
 }
 
 .swiper-pagination {
@@ -309,8 +319,8 @@ header {
   background-color: transparent;
   border: 1.4px solid #fff;
   opacity: 1;
-  width: 14px;
-  height: 16px;
+  width: 18px;
+  height: 22px;
   border-radius: 0;
   -webkit-transform: skew(-45deg);
       -ms-transform: skew(-45deg);
@@ -334,9 +344,9 @@ header {
 
 .blur-block {
   position: absolute;
-  width: 204px;
-  height: 111px;
-  right: -90px;
+  width: 230px;
+  height: 125px;
+  right: -60px;
   bottom: 18px;
   background: -o-linear-gradient(353.94deg, rgba(255, 255, 255, 0.06) -34.71%, rgba(0, 125, 255, 0) 118.28%);
   background: linear-gradient(96.06deg, rgba(255, 255, 255, 0.06) -34.71%, rgba(0, 125, 255, 0) 118.28%);
@@ -346,12 +356,12 @@ header {
 }
 
 .circle {
-  left: 80px;
+  left: 20px;
   position: absolute;
 }
 
 .circle svg {
-  width: 112px;
+  width: 137px;
 }
 
 .circle__text {
@@ -385,8 +395,8 @@ header {
 
 .circle__blur {
   position: absolute;
-  width: 102px;
-  height: 102px;
+  width: 125px;
+  height: 125px;
   left: 25px;
   top: 17px;
   background: -o-linear-gradient(353.94deg, rgba(255, 255, 255, 0.06) -34.71%, rgba(0, 125, 255, 0) 118.28%);
@@ -659,6 +669,115 @@ header {
   color: #828282;
 }
 
+.line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: run-line 10s linear infinite;
+          animation: run-line 10s linear infinite;
+  white-space: nowrap;
+}
+
+.line__border {
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  padding: 16px 0;
+  margin-bottom: 240px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.line__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 11px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-family: 'Jura', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.line__star {
+  margin-right: 32px;
+}
+
+@-webkit-keyframes run-line {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes run-line {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .wrap {
+    max-width: 1296px;
+  }
+
+  .header {
+    max-width: 1074px;
+  }
+
+  .slider__wrap {
+    width: 333px;
+  }
+
+  .swiper {
+    width: 333px;
+  }
+
+  .header__title svg {
+    width: 730px;
+  }
+
+  .circle {
+    left: 80px;
+  }
+
+  .circle svg {
+    width: 112px;
+  }
+
+  .circle__blur {
+    width: 102px;
+    height: 102px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 16px;
+  }
+
+  .blur-block {
+    width: 204px;
+    height: 111px;
+    right: -90px;
+  }
+}
+
 @media screen and (max-width: 1240px) {
   .three__right {
     max-width: 650px;
@@ -923,7 +1042,6 @@ header {
 
 @media screen and (max-width: 700px) {
   .window {
-    width: calc(100% - 64px);
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -1009,6 +1127,12 @@ header {
 
   .title {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .window {
+    width: calc(100% - 64px);
   }
 }
 
