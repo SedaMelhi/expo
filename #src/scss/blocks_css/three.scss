@@ -28,6 +28,10 @@
         justify-content: flex-end;
         margin-top: 32px;
         font-size: 1rem;
+        align-items: center;
+        svg{
+            margin-left: 10px;
+        }
     }
     & .btn_mobile{
         display: none;
@@ -95,6 +99,9 @@
         &__more{
             margin-top: 20px;
             font-size: .9rem;
+            svg{
+                width: 18px;
+            }
         }
     }
     .list{
@@ -164,6 +171,7 @@
         }
         &__arrow{
             display: block;
+
         }
         & .swiper-slide-thumb-active{
             transform: scale(1);
@@ -176,6 +184,11 @@
     .list{
         & .swiper-slide{
             font-size: 18px;
+        }
+        &__arrow{
+            svg{
+                width: 20px;
+            }
         }
     }
     .three {
