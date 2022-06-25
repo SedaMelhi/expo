@@ -290,6 +290,21 @@ header{
 .circle__wrap{
     position: relative;
 }
+@media screen and(max-width: 685px){
+    header{
+        min-height: 650px;
+    }
+    .header{
+        &__wrap{
+            height: calc(100% - 60px);
+            padding: 0 24px;
+        }
+        height: calc(100% - 260px);
+    }
+    .logo img{
+        width: 170px;
+    }
+}
 @media screen and(max-width: 650px){
     .slider__wrap{
         right: 35px;
@@ -344,7 +359,7 @@ header{
             height: calc(100% - 60px);
             padding: 0 24px;
         }
-        height: calc(100% - 225px);
+        height: calc(100% - 260px);
         &__title{
             svg{
                 width: 100%;

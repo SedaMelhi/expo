@@ -891,6 +891,21 @@ header {
   margin-left: 32px;
 }
 
+.seven .agency__description {
+  width: 525px;
+  margin: 0 60px;
+}
+
+.seven .btn {
+  margin-left: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
 @media screen and (max-width: 1700px) {
   .wrap {
     max-width: 1296px;
@@ -1128,6 +1143,18 @@ header {
   }
 }
 
+@media screen and (max-width: 780px) {
+  .seven .btn_pc {
+    display: none;
+  }
+
+  .seven .btn_mobile {
+    width: 100%;
+    margin-top: 48px;
+    display: block;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .agency__data {
     display: none;
@@ -1322,6 +1349,23 @@ header {
     width: 311px;
     margin: 32px auto 0;
   }
+
+  header {
+    min-height: 650px;
+  }
+
+  .header {
+    height: calc(100% - 260px);
+  }
+
+  .header__wrap {
+    height: calc(100% - 60px);
+    padding: 0 24px;
+  }
+
+  .logo img {
+    width: 170px;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -1366,6 +1410,29 @@ header {
 
   .three__wrap {
     padding: 35px 0;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .seven .agency {
+    margin-top: 70px;
+  }
+
+  .seven .agency__block {
+    padding: 24px 0;
+    font-size: 14px;
+  }
+
+  .seven .agency__description {
+    width: 100%;
+    margin: 16px 0 0;
+  }
+
+  .seven .btn {
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 45px;
+    height: 45px;
   }
 }
 
@@ -1457,7 +1524,7 @@ header {
   }
 
   .header {
-    height: calc(100% - 225px);
+    height: calc(100% - 260px);
   }
 
   .header__wrap {

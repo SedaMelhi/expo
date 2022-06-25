@@ -70,3 +70,58 @@
         }
     }
 } 
+
+.seven{
+    .agency{
+        &__description{
+            width: 525px;
+            margin: 0 60px;
+        }
+    }
+    .btn{
+        margin-left: 0;
+        flex-shrink: 0;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .seven{
+       
+        .btn{
+            &_pc{
+                display: none;
+            }
+            &_mobile{
+                width: 100%;
+                margin-top: 48px;
+                display: block;
+            }
+        }
+    }
+}
+.title{
+    text-transform: uppercase;
+}
+@media screen and (max-width: 580px) {
+   
+    .seven{
+        .agency{
+            margin-top: 70px;
+        }
+        .agency__block{
+            padding: 24px 0;
+            font-size: 14px;
+        }
+        .agency__description{
+            width: 100%;
+            margin: 16px 0 0;
+        }
+        .btn{
+            margin-top: 24px;
+            font-size: 14px;
+            line-height: 45px;
+            height: 45px;
+        }
+    }
+   
+}
