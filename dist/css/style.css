@@ -732,6 +732,134 @@ header {
   }
 }
 
+.project {
+  margin-top: 250px;
+}
+
+.project .title {
+  text-transform: uppercase;
+}
+
+.project__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 0;
+  margin-top: 70px;
+}
+
+.project__item > div:nth-child(1) {
+  margin-right: 30px;
+}
+
+.project .square {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.project .square__item {
+  width: 11%;
+}
+
+.project__right {
+  width: 584px;
+}
+
+.project__right img {
+  width: 100%;
+}
+
+.card {
+  width: 553px;
+  overflow: hidden;
+  position: relative;
+  padding: 40px 0;
+}
+
+.card__block {
+  padding: 32px 48px;
+  width: calc(100% - 80px);
+  position: relative;
+  z-index: 2;
+  background: #161616;
+  margin: 0 auto;
+}
+
+.card__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: .8rem;
+  line-height: 1.4rem;
+  color: #828282;
+  font-weight: 400;
+}
+
+.card__data {
+  margin-right: 16px;
+}
+
+.card__title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #FFFFFF;
+  margin: 24px 0 16px;
+}
+
+.card__description {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: #828282;
+  margin-bottom: 48px;
+  max-width: 378px;
+}
+
+.link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1.6rem;
+  color: #007DFF;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.link__text {
+  margin-right: 12px;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 204px;
+  height: 62px;
+  border: 1px solid #007DFF;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #007DFF;
+  cursor: pointer;
+  margin-top: 130px;
+}
+
+.button svg {
+  margin-left: 14px;
+}
+
 @media screen and (max-width: 1700px) {
   .wrap {
     max-width: 1296px;
@@ -788,6 +916,17 @@ header {
   }
 }
 
+@media screen and (max-width: 1150px) {
+  .card {
+    padding: 30px 0;
+  }
+
+  .card__block {
+    padding: 32px 44px;
+    width: calc(100% - 60px);
+  }
+}
+
 @media screen and (max-width: 1140px) {
   .three__right {
     max-width: 500px;
@@ -836,6 +975,15 @@ header {
   .focus__item {
     width: 100%;
     margin-top: 32px;
+  }
+
+  .card {
+    padding: 20px 0;
+  }
+
+  .card__block {
+    padding: 30px 38px;
+    width: calc(100% - 40px);
   }
 }
 
@@ -955,6 +1103,55 @@ header {
 @media screen and (max-width: 750px) {
   .three__right {
     max-width: 370px;
+  }
+
+  .project .title {
+    margin-bottom: 70px;
+  }
+
+  .project__item {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 32px auto 0;
+    padding: 0;
+  }
+
+  .project__item_reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .project__item > div:nth-child(1) {
+    margin-right: 0;
+  }
+
+  .project .square {
+    display: none;
+  }
+
+  .project__right {
+    width: 100%;
+  }
+
+  .card {
+    padding: 0;
+    width: 100%;
+    margin-top: 32px;
+  }
+
+  .card__block {
+    width: 100%;
+  }
+
+  .button {
+    margin-top: 70px;
+    width: 182px;
+    height: 56px;
   }
 }
 
@@ -1127,6 +1324,44 @@ header {
 
   .title {
     font-size: 20px;
+  }
+
+  .card__block {
+    padding: 41px 24px;
+  }
+
+  .card__title {
+    font-size: 16px;
+    margin: 16px 0 4px;
+  }
+
+  .card__top {
+    font-size: 12px;
+  }
+
+  .card__description {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 32px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+
+  .link svg {
+    width: 16px;
+  }
+
+  .button {
+    width: 156px;
+    height: 48px;
+    font-size: 14px;
+    margin-top: 32px;
+  }
+
+  .button svg {
+    width: 11px;
   }
 }
 
