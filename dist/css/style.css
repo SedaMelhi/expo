@@ -682,7 +682,6 @@ header {
   border-top: 1px solid #FFFFFF;
   border-bottom: 1px solid #FFFFFF;
   padding: 16px 0;
-  margin-bottom: 240px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -860,6 +859,38 @@ header {
   margin-left: 14px;
 }
 
+.cooperation {
+  margin-top: 240px;
+}
+
+.cooperation .title {
+  margin-bottom: 70px;
+}
+
+.cooperation__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cooperation__item {
+  width: calc(33.3% - 22px);
+  background: #161616;
+  padding: 54px 20px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.cooperation__item_margin {
+  margin-right: 32px;
+  margin-left: 32px;
+}
+
 @media screen and (max-width: 1700px) {
   .wrap {
     max-width: 1296px;
@@ -934,6 +965,21 @@ header {
 
   .list {
     height: 280px;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .cooperation__item {
+    width: calc(50% - 16px);
+  }
+
+  .cooperation__item_margin {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .cooperation__item:nth-child(2n) {
+    margin-left: 32px;
   }
 }
 
@@ -1097,6 +1143,27 @@ header {
 
   .title {
     font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .cooperation .title {
+    margin-bottom: 48px;
+  }
+
+  .cooperation__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .cooperation__item {
+    width: 100%;
+  }
+
+  .cooperation__item:nth-child(2n) {
+    margin-left: 0;
   }
 }
 
@@ -1326,6 +1393,10 @@ header {
     font-size: 20px;
   }
 
+  .project {
+    margin-top: 120px;
+  }
+
   .card__block {
     padding: 41px 24px;
   }
@@ -1366,6 +1437,10 @@ header {
 }
 
 @media screen and (max-width: 570px) {
+  .focus__wrap {
+    margin-bottom: 110px;
+  }
+
   .window {
     width: calc(100% - 64px);
   }
@@ -1497,6 +1572,31 @@ header {
 
   .focus__item {
     margin-top: 8px;
+  }
+
+  .cooperation {
+    margin-top: 120px;
+  }
+
+  .cooperation .title {
+    margin-bottom: 24px;
+  }
+
+  .cooperation__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .cooperation__item {
+    padding: 32px 20px;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .cooperation__item img {
+    width: 62px;
   }
 }
 

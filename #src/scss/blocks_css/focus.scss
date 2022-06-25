@@ -92,6 +92,9 @@
     }
 }
 @media screen and(max-width: 570px){
+    .focus__wrap{
+        margin-bottom: 110px;
+    }
     .window{
         width: calc(100% - 64px);
     }
@@ -135,7 +138,6 @@
         border-top: 1px solid #FFFFFF;
         border-bottom: 1px solid #FFFFFF;
         padding: 16px 0;
-        margin-bottom: 240px;
         overflow: hidden;
         display: flex;
     }
