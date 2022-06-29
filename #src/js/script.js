@@ -1,38 +1,77 @@
-const swiper = new Swiper('.swiper', {
-  pagination:{
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  grabCursor: true,
-  initialSlide: 2,
-  autoplay:{
-    delay: 2000,
-  },
-  loop: true,
-  speed: 700,
-  effect: "cube",
-  cubeEffect: {
-    shadow: false,
-  },
-})
+window.addEventListener("load", function() {
 
-const dots = document.querySelectorAll('.swiper-pagination-bullet');
-const activeDot = document.querySelector(".swiper-pagination-bullet-active")
-const activeNum = activeDot.getAttribute("aria-label")[activeDot.getAttribute("aria-label").length-1]
-for(let i = 0; i < activeNum; i++){
-  dots[i].classList.add("swiper-pagination-bullet-white")
-}
-
-swiper.on('slideChange', function(){
+  const swiper = new Swiper('.swiper', {
+    pagination:{
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    grabCursor: true,
+    initialSlide: 2,
+    autoplay:{
+      delay: 2000,
+    },
+    loop: true,
+    speed: 700,
+    effect: "coverflow",
+    cubeEffect: {
+      shadow: false,
+    },
+  })
+  
+  const dots = document.querySelectorAll('.swiper-pagination-bullet');
   const activeDot = document.querySelector(".swiper-pagination-bullet-active")
   const activeNum = activeDot.getAttribute("aria-label")[activeDot.getAttribute("aria-label").length-1]
   for(let i = 0; i < activeNum; i++){
     dots[i].classList.add("swiper-pagination-bullet-white")
   }
-  for(let i = activeNum; i < 6; i++){
-    dots[i].classList.remove("swiper-pagination-bullet-white")
-  }
+  
+  swiper.on('slideChange', function(){
+    const activeDot = document.querySelector(".swiper-pagination-bullet-active")
+    const activeNum = activeDot.getAttribute("aria-label")[activeDot.getAttribute("aria-label").length-1]
+    for(let i = 0; i < activeNum; i++){
+      dots[i].classList.add("swiper-pagination-bullet-white")
+    }
+    for(let i = activeNum; i < 6; i++){
+      dots[i].classList.remove("swiper-pagination-bullet-white")
+    }
+  })
+  setTimeout(() => {
+    for (let slide of document.querySelectorAll(".swiper-slide")){
+      if (!slide.classList.contains("swiper-slide-active")){
+        slide.classList.add("swiper-slide-first")
+      }
+    }   
+  }, 2000);
+  setTimeout(() => {
+    for (let slide of document.querySelectorAll(".swiper-slide")){
+      if (!slide.classList.contains("swiper-slide-active")){
+        slide.classList.remove("swiper-slide-first")
+      }
+    }   
+  }, 4000);
+  const square = this.document.querySelectorAll(".header .square__item")
+  const squareLine = this.document.querySelector(".header .square__line")
+  
+  let num = 0
+  let timerId = setInterval(() => {  
+    squareLineShow(num, squareLine, square)
+    num++
+  }, 25)
+  setTimeout(() => { clearInterval(timerId); }, 595);  
 })
+function squareLineShow(num, squareLine, square){
+  let timerId = setInterval(() => {  
+    randomSquare(square, num)
+    num += squareLine.children.length
+  }, 25);
+  setTimeout(() => { clearInterval(timerId); }, 2000);
+}
+function randomSquare(square, num){
+  square[num].classList.add("square__bg")
+  square[num].classList.add("square__show")
+  setTimeout(() => square[num].classList.remove("square__bg"), 500);
+}
+
 
 
 const swiper2 = new Swiper('.three__right', {
