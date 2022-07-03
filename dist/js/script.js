@@ -1,5 +1,6 @@
 window.addEventListener("load", function() {
-
+  AOS.init()
+  document.querySelector("body").classList.add("animation")
   const swiper = new Swiper('.swiper', {
     pagination:{
       el: '.swiper-pagination',
@@ -133,7 +134,6 @@ const swiper2 = new Swiper('.three__right', {
     }
   }
 })
-
 
 
 
