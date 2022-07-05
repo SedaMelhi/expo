@@ -413,6 +413,7 @@ header {
 }
 
 .btn_mobile {
+  opacity: 0;
   display: none;
 }
 
@@ -474,6 +475,11 @@ header .square {
 .animation .header__subtitle {
   -webkit-animation: show 0.8s 1 forwards 4s;
           animation: show 0.8s 1 forwards 4s;
+}
+
+.animation header .btn_mobile {
+  -webkit-animation: show-opacity 0.8s 1 forwards 4s;
+          animation: show-opacity 0.8s 1 forwards 4s;
 }
 
 .animation header .square {
@@ -818,6 +824,18 @@ header .square {
 @keyframes show {
   100% {
     visibility: visible;
+  }
+}
+
+@-webkit-keyframes show-opacity {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show-opacity {
+  100% {
+    opacity: 1;
   }
 }
 
@@ -1545,123 +1563,6 @@ header .square {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .animation .header__title path:nth-child(1) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.02857s forwards;
-            animation: title-show 0.5s 1 ease-out 1.02857s forwards;
-  }
-
-  .animation .header__title path:nth-child(2) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.05714s forwards;
-            animation: title-show 0.5s 1 ease-out 1.05714s forwards;
-  }
-
-  .animation .header__title path:nth-child(3) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.08571s forwards;
-            animation: title-show 0.5s 1 ease-out 1.08571s forwards;
-  }
-
-  .animation .header__title path:nth-child(4) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.11429s forwards;
-            animation: title-show 0.5s 1 ease-out 1.11429s forwards;
-  }
-
-  .animation .header__title path:nth-child(5) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.14286s forwards;
-            animation: title-show 0.5s 1 ease-out 1.14286s forwards;
-  }
-
-  .animation .header__title path:nth-child(6) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.17143s forwards;
-            animation: title-show 0.5s 1 ease-out 1.17143s forwards;
-  }
-
-  .animation .header__title path:nth-child(7) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.2s forwards;
-            animation: title-show 0.5s 1 ease-out 1.2s forwards;
-  }
-
-  .animation .header__title path:nth-child(8) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.22857s forwards;
-            animation: title-show 0.5s 1 ease-out 1.22857s forwards;
-  }
-
-  .animation .header__title path:nth-child(9) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.25714s forwards;
-            animation: title-show 0.5s 1 ease-out 1.25714s forwards;
-  }
-
-  .animation .header__title path:nth-child(10) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.28571s forwards;
-            animation: title-show 0.5s 1 ease-out 1.28571s forwards;
-  }
-
-  .animation .header__title path:nth-child(11) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.31429s forwards;
-            animation: title-show 0.5s 1 ease-out 1.31429s forwards;
-  }
-
-  .animation .header__title path:nth-child(12) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.34286s forwards;
-            animation: title-show 0.5s 1 ease-out 1.34286s forwards;
-  }
-
-  .animation .header__title path:nth-child(13) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.37143s forwards;
-            animation: title-show 0.5s 1 ease-out 1.37143s forwards;
-  }
-
-  .animation .header__title path:nth-child(14) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.4s forwards;
-            animation: title-show 0.5s 1 ease-out 1.4s forwards;
-  }
-
-  .animation .header__title path:nth-child(15) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.42857s forwards;
-            animation: title-show 0.5s 1 ease-out 1.42857s forwards;
-  }
-
-  .animation .header__title path:nth-child(16) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.22857s forwards;
-            animation: title-show 0.5s 1 ease-out 1.22857s forwards;
-  }
-
-  .animation .header__title path:nth-child(17) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.25714s forwards;
-            animation: title-show 0.5s 1 ease-out 1.25714s forwards;
-  }
-
-  .animation .header__title path:nth-child(18) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.28571s forwards;
-            animation: title-show 0.5s 1 ease-out 1.28571s forwards;
-  }
-
-  .animation .header__title path:nth-child(19) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.31429s forwards;
-            animation: title-show 0.5s 1 ease-out 1.31429s forwards;
-  }
-
-  .animation .header__title path:nth-child(20) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.34286s forwards;
-            animation: title-show 0.5s 1 ease-out 1.34286s forwards;
-  }
-
-  .animation .header__title path:nth-child(21) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.37143s forwards;
-            animation: title-show 0.5s 1 ease-out 1.37143s forwards;
-  }
-
-  .animation .header__title path:nth-child(22) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.4s forwards;
-            animation: title-show 0.5s 1 ease-out 1.4s forwards;
-  }
-
-  .animation .header__title path:nth-child(23) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.42857s forwards;
-            animation: title-show 0.5s 1 ease-out 1.42857s forwards;
-  }
-}
-
 @media screen and (max-width: 1150px) {
   .card {
     padding: 30px 0;
@@ -1854,121 +1755,6 @@ header .square {
 }
 
 @media screen and (max-width: 850px) {
-  .animation .header__title path:nth-child(1) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.02857s forwards;
-            animation: title-show 0.5s 1 ease-out 1.02857s forwards;
-  }
-
-  .animation .header__title path:nth-child(2) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.05714s forwards;
-            animation: title-show 0.5s 1 ease-out 1.05714s forwards;
-  }
-
-  .animation .header__title path:nth-child(3) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.08571s forwards;
-            animation: title-show 0.5s 1 ease-out 1.08571s forwards;
-  }
-
-  .animation .header__title path:nth-child(4) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.11429s forwards;
-            animation: title-show 0.5s 1 ease-out 1.11429s forwards;
-  }
-
-  .animation .header__title path:nth-child(5) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.14286s forwards;
-            animation: title-show 0.5s 1 ease-out 1.14286s forwards;
-  }
-
-  .animation .header__title path:nth-child(6) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.17143s forwards;
-            animation: title-show 0.5s 1 ease-out 1.17143s forwards;
-  }
-
-  .animation .header__title path:nth-child(7) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.2s forwards;
-            animation: title-show 0.5s 1 ease-out 1.2s forwards;
-  }
-
-  .animation .header__title path:nth-child(8) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.22857s forwards;
-            animation: title-show 0.5s 1 ease-out 1.22857s forwards;
-  }
-
-  .animation .header__title path:nth-child(9) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.25714s forwards;
-            animation: title-show 0.5s 1 ease-out 1.25714s forwards;
-  }
-
-  .animation .header__title path:nth-child(10) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.28571s forwards;
-            animation: title-show 0.5s 1 ease-out 1.28571s forwards;
-  }
-
-  .animation .header__title path:nth-child(11) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.31429s forwards;
-            animation: title-show 0.5s 1 ease-out 1.31429s forwards;
-  }
-
-  .animation .header__title path:nth-child(12) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.34286s forwards;
-            animation: title-show 0.5s 1 ease-out 1.34286s forwards;
-  }
-
-  .animation .header__title path:nth-child(13) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.37143s forwards;
-            animation: title-show 0.5s 1 ease-out 1.37143s forwards;
-  }
-
-  .animation .header__title path:nth-child(14) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.4s forwards;
-            animation: title-show 0.5s 1 ease-out 1.4s forwards;
-  }
-
-  .animation .header__title path:nth-child(15) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.42857s forwards;
-            animation: title-show 0.5s 1 ease-out 1.42857s forwards;
-  }
-
-  .animation .header__title path:nth-child(16) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.12857s forwards;
-            animation: title-show 0.5s 1 ease-out 1.12857s forwards;
-  }
-
-  .animation .header__title path:nth-child(17) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.15714s forwards;
-            animation: title-show 0.5s 1 ease-out 1.15714s forwards;
-  }
-
-  .animation .header__title path:nth-child(18) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.18571s forwards;
-            animation: title-show 0.5s 1 ease-out 1.18571s forwards;
-  }
-
-  .animation .header__title path:nth-child(19) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.21429s forwards;
-            animation: title-show 0.5s 1 ease-out 1.21429s forwards;
-  }
-
-  .animation .header__title path:nth-child(20) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.24286s forwards;
-            animation: title-show 0.5s 1 ease-out 1.24286s forwards;
-  }
-
-  .animation .header__title path:nth-child(21) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.27143s forwards;
-            animation: title-show 0.5s 1 ease-out 1.27143s forwards;
-  }
-
-  .animation .header__title path:nth-child(22) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.3s forwards;
-            animation: title-show 0.5s 1 ease-out 1.3s forwards;
-  }
-
-  .animation .header__title path:nth-child(23) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.32857s forwards;
-            animation: title-show 0.5s 1 ease-out 1.32857s forwards;
-  }
-
   footer {
     background: #161616;
   }
@@ -2227,6 +2013,56 @@ header .square {
   .slider__wrap {
     right: 35px;
   }
+
+  .animation .header__title path:nth-child(8) {
+    -webkit-animation: title-fill-mobile 0.5s 1 ease-out 1.12857s forwards;
+            animation: title-fill-mobile 0.5s 1 ease-out 1.12857s forwards;
+  }
+
+  .animation .header__title path:nth-child(9) {
+    -webkit-animation: title-fill-mobile 0.5s 1 ease-out 1.15714s forwards;
+            animation: title-fill-mobile 0.5s 1 ease-out 1.15714s forwards;
+  }
+
+  .animation .header__title path:nth-child(10) {
+    -webkit-animation: title-fill-mobile 0.5s 1 ease-out 1.18571s forwards;
+            animation: title-fill-mobile 0.5s 1 ease-out 1.18571s forwards;
+  }
+
+  .animation .header__title path:nth-child(19) {
+    -webkit-animation: title-fill-mobile 0.5s 1 ease-out 1.04286s forwards;
+            animation: title-fill-mobile 0.5s 1 ease-out 1.04286s forwards;
+  }
+
+  .animation .header__title path:nth-child(20) {
+    -webkit-animation: title-fill-mobile 0.5s 1 ease-out 1.07143s forwards;
+            animation: title-fill-mobile 0.5s 1 ease-out 1.07143s forwards;
+  }
+
+  .animation .header__title path:nth-child(21) {
+    -webkit-animation: title-fill-mobile 0.5s 1 ease-out 1.1s forwards;
+            animation: title-fill-mobile 0.5s 1 ease-out 1.1s forwards;
+  }
+
+@-webkit-keyframes title-fill-mobile {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes title-fill-mobile {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+}
 }
 
 @media screen and (max-width: 620px) {
@@ -2528,121 +2364,6 @@ header .square {
 
   .header {
     height: calc(100% - 270px);
-  }
-
-  .animation .header__title path:nth-child(1) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.32857s forwards;
-            animation: title-show 0.5s 1 ease-out 1.32857s forwards;
-  }
-
-  .animation .header__title path:nth-child(2) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.35714s forwards;
-            animation: title-show 0.5s 1 ease-out 1.35714s forwards;
-  }
-
-  .animation .header__title path:nth-child(3) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.38571s forwards;
-            animation: title-show 0.5s 1 ease-out 1.38571s forwards;
-  }
-
-  .animation .header__title path:nth-child(4) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.41429s forwards;
-            animation: title-show 0.5s 1 ease-out 1.41429s forwards;
-  }
-
-  .animation .header__title path:nth-child(5) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.44286s forwards;
-            animation: title-show 0.5s 1 ease-out 1.44286s forwards;
-  }
-
-  .animation .header__title path:nth-child(6) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.47143s forwards;
-            animation: title-show 0.5s 1 ease-out 1.47143s forwards;
-  }
-
-  .animation .header__title path:nth-child(7) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.5s forwards;
-            animation: title-show 0.5s 1 ease-out 1.5s forwards;
-  }
-
-  .animation .header__title path:nth-child(8) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.52857s forwards;
-            animation: title-show 0.5s 1 ease-out 1.52857s forwards;
-  }
-
-  .animation .header__title path:nth-child(9) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.55714s forwards;
-            animation: title-show 0.5s 1 ease-out 1.55714s forwards;
-  }
-
-  .animation .header__title path:nth-child(10) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.58571s forwards;
-            animation: title-show 0.5s 1 ease-out 1.58571s forwards;
-  }
-
-  .animation .header__title path:nth-child(11) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.61429s forwards;
-            animation: title-show 0.5s 1 ease-out 1.61429s forwards;
-  }
-
-  .animation .header__title path:nth-child(12) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.64286s forwards;
-            animation: title-show 0.5s 1 ease-out 1.64286s forwards;
-  }
-
-  .animation .header__title path:nth-child(13) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.67143s forwards;
-            animation: title-show 0.5s 1 ease-out 1.67143s forwards;
-  }
-
-  .animation .header__title path:nth-child(14) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.7s forwards;
-            animation: title-show 0.5s 1 ease-out 1.7s forwards;
-  }
-
-  .animation .header__title path:nth-child(15) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.72857s forwards;
-            animation: title-show 0.5s 1 ease-out 1.72857s forwards;
-  }
-
-  .animation .header__title path:nth-child(16) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.42857s forwards;
-            animation: title-show 0.5s 1 ease-out 1.42857s forwards;
-  }
-
-  .animation .header__title path:nth-child(17) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.45714s forwards;
-            animation: title-show 0.5s 1 ease-out 1.45714s forwards;
-  }
-
-  .animation .header__title path:nth-child(18) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.48571s forwards;
-            animation: title-show 0.5s 1 ease-out 1.48571s forwards;
-  }
-
-  .animation .header__title path:nth-child(19) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.51429s forwards;
-            animation: title-show 0.5s 1 ease-out 1.51429s forwards;
-  }
-
-  .animation .header__title path:nth-child(20) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.54286s forwards;
-            animation: title-show 0.5s 1 ease-out 1.54286s forwards;
-  }
-
-  .animation .header__title path:nth-child(21) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.57143s forwards;
-            animation: title-show 0.5s 1 ease-out 1.57143s forwards;
-  }
-
-  .animation .header__title path:nth-child(22) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.6s forwards;
-            animation: title-show 0.5s 1 ease-out 1.6s forwards;
-  }
-
-  .animation .header__title path:nth-child(23) {
-    -webkit-animation: title-show 0.5s 1 ease-out 1.62857s forwards;
-            animation: title-show 0.5s 1 ease-out 1.62857s forwards;
   }
 
   .window__title {

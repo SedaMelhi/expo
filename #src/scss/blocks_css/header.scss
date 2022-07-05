@@ -345,6 +345,7 @@ header{
     }
 }
 .btn_mobile{
+    opacity:0;
     display: none;
 }
 @media screen and(max-width: 510px) {
@@ -453,7 +454,9 @@ header .square{
     .header__subtitle{
         animation: show 0.8s 1 forwards 4s;
     }
-    
+    header .btn_mobile{
+        animation: show-opacity 0.8s 1 forwards 4s;
+    }
     header .square{
         animation: zindex .1s 1 forwards 6s;
         &__show{
@@ -514,6 +517,11 @@ header .square{
         visibility: visible;
     }
 }
+@keyframes show-opacity{
+    100%{
+        opacity: 1;
+    }
+}
 @keyframes show-nav{
     0%{
         opacity: 0;
@@ -533,60 +541,34 @@ header .square{
 
 
 
-@media screen and (max-width: 1200px) {
+
+@media screen and (max-width: 650px) {
     .animation{
-        @for $i from 1 to 16 {
-            $n: $i;
-            $time: $i / 35;
-            .header__title path:nth-child(#{$n}){
-                animation: title-show .5s 1 ease-out #{$time + 1}s  forwards;
-            }
-        }
-        @for $j from 1 to 9 {
-            $num: $j+15;
+        @for $j from 8 to 11 {
+            $num: $j;
             $time2: $j / 35;
             .header__title path:nth-child(#{$num}){
-                animation: title-show .5s 1 ease-out #{$time2 + 1.2}s  forwards;
+                animation: title-fill-mobile .5s 1 ease-out #{$time2 + .9}s  forwards;
+            }
+        }  
+        @for $j from 19 to 22 {
+            $num: $j;
+            $time2: $j / 35;
+            .header__title path:nth-child(#{$num}){
+                animation: title-fill-mobile .5s 1 ease-out #{$time2 + .5}s  forwards;
             }
         }
     }
-}
-@media screen and (max-width: 850px) {
-    .animation{
-        @for $i from 1 to 16 {
-            $n: $i;
-            $time: $i / 35;
-            .header__title path:nth-child(#{$n}){
-                animation: title-show .5s 1 ease-out #{$time + 1}s  forwards;
-            }
-        }
-        @for $j from 1 to 9 {
-            $num: $j+15;
-            $time2: $j / 35;
-            .header__title path:nth-child(#{$num}){
-                animation: title-show .5s 1 ease-out #{$time2 + 1.1}s  forwards;
-            }
+    @keyframes title-fill-mobile{
+        0%{
+            opacity: 0;
+        } 
+        100%{
+            opacity: 1;
         }
     }
 }
-@media screen and (max-width: 450px) {
-    .animation{
-        @for $i from 1 to 16 {
-            $n: $i;
-            $time: $i / 35;
-            .header__title path:nth-child(#{$n}){
-                animation: title-show .5s 1 ease-out #{$time + 1.3}s  forwards;
-            }
-        }
-        @for $j from 1 to 9 {
-            $num: $j+15;
-            $time2: $j / 35;
-            .header__title path:nth-child(#{$num}){
-                animation: title-show .5s 1 ease-out #{$time2 + 1.4}s  forwards;
-            }
-        }
-    }
-}
+
 @keyframes slider{
     100%{
         visibility: visible;
