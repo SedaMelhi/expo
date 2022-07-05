@@ -126,6 +126,13 @@ nav {
   margin-left: 48px;
 }
 
+.menu__item:hover a {
+  color: #007cfc;
+  -webkit-transition: .3s linear;
+  -o-transition: .3s linear;
+  transition: .3s linear;
+}
+
 .btn {
   cursor: pointer;
   margin-left: 75px;

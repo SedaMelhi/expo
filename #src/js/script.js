@@ -137,6 +137,25 @@ const swiper2 = new Swiper('.three__right', {
 
 
 
+const menu_items = document.querySelectorAll(".menu__item a");
+const menu = document.querySelector(".menu")
+
+menu_items.forEach(item => item.addEventListener("click", function (e) {
+  
+      e.preventDefault();
+      let href = this.getAttribute('href').substring(1);
+      const scrollTarget = document.getElementById(href);
+      const topOffset = menu.offsetHeight;
+      const elementPosition = scrollTarget.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - topOffset;
+      window.scrollBy({
+          top: offsetPosition,
+          behavior: 'smooth'
+      });
+  
+  
+}))
+
 
 
 
