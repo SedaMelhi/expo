@@ -57,7 +57,7 @@ window.addEventListener("load", function() {
   let timerId = setInterval(() => {  
     squareLineShow(num, squareLine, square)
     num++
-  }, 25)
+  }, 25.8)
   setTimeout(() => { clearInterval(timerId); }, 595);  
 })
 function squareLineShow(num, squareLine, square){
@@ -65,7 +65,7 @@ function squareLineShow(num, squareLine, square){
     randomSquare(square, num)
     num += squareLine.children.length
   }, 25);
-  setTimeout(() => { clearInterval(timerId); }, 2000);
+  setTimeout(() => { clearInterval(timerId); }, 3000);
 }
 function randomSquare(square, num){
   square[num].classList.add("square__bg")
