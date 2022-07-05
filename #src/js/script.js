@@ -65,7 +65,7 @@ function squareLineShow(num, squareLine, square){
     randomSquare(square, num)
     num += squareLine.children.length
   }, 25);
-  setTimeout(() => { clearInterval(timerId); }, 3000);
+  setTimeout(() => { clearInterval(timerId); }, 1500);
 }
 function randomSquare(square, num){
   square[num].classList.add("square__bg")
