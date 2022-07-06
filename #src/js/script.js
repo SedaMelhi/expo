@@ -52,27 +52,30 @@ window.addEventListener("load", function() {
   }, 4000);
   const square = this.document.querySelectorAll(".header .square__item")
   const squareLine = this.document.querySelector(".header .square__line")
-  
+  const squareWrap = this.document.querySelector(".header .square")
+
   let num = 0
+ 
   let timerId = setInterval(() => {  
     squareLineShow(num, squareLine, square)
     num++
-  }, 25.8)
-  setTimeout(() => { clearInterval(timerId); }, 595);  
-})
+  }, 25)
+  setTimeout(() => { clearInterval(timerId); }, 23*25); 
+}) 
+////////////////////////////////////////////////////////////////////
+
 function squareLineShow(num, squareLine, square){
   let timerId = setInterval(() => {  
     randomSquare(square, num)
     num += squareLine.children.length
   }, 25);
-  setTimeout(() => { clearInterval(timerId); }, 1500);
+  setTimeout(() => { clearInterval(timerId); }, 40*25);
 }
 function randomSquare(square, num){
   square[num].classList.add("square__bg")
   square[num].classList.add("square__show")
   setTimeout(() => square[num].classList.remove("square__bg"), 500);
 }
-
 
 
 const swiper2 = new Swiper('.three__right', {
@@ -155,49 +158,3 @@ menu_items.forEach(item => item.addEventListener("click", function (e) {
   
   
 }))
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * 
-const swiper2 = new Swiper('.three__right', {
-  grabCursor: true,
-  initialSlide: 2,
-  slidesPerView: 1,
-  slidesPerGroup: 1,
-  loopedSlides: 5,
-  centeredSlides: true,
-  autoplay:{
-    delay: 2000,
-  },
-  loop: true,
-  speed: 400,
-  effect: "slide",
- 
-})
-
-const thumbs = new Swiper('.list', {
-  slidesPerView: 'auto',
-  slidesPerGroup: 1,
-  direction: 'vertical',
-  initialSlide: 2,
-  spaceBetween: 46,
-  centeredSlides: true,
-  slideToClickedSlide: true,
-  loop: true,
-
-})
-
-swiper2.controller.control = thumbs;
-thumbs.controller.control = swiper2;
- */
