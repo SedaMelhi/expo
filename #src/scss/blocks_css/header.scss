@@ -430,9 +430,7 @@ header .square__item{
     z-index: -1;
     position: relative;
 }
-header .square{
-    z-index: 3;
-}
+
 .animation{
     .slider__wrap{
         animation: show 0.2s linear 1 forwards 2.2s;
@@ -457,7 +455,14 @@ header .square{
         animation: show-opacity 0.8s 1 forwards 4s;
     }
     header .square{
-        animation: zindex .1s 1 forwards 6s;
+        &__item{
+            animation: square-border 1 .2s 1.3s linear forwards;
+        }
+        @keyframes square-border{
+            100%{
+                opacity: 1;
+            }
+        }
         &__show{
             transition: .7s ease-out;
             opacity: 1;
@@ -506,11 +511,7 @@ header .square{
         opacity: 0;
     }
 }
-@keyframes zindex{
-    100%{
-        z-index: 1;
-    }
-}
+
 @keyframes show{
     100%{
         visibility: visible;

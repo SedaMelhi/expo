@@ -449,10 +449,6 @@ header .square__item {
   position: relative;
 }
 
-header .square {
-  z-index: 3;
-}
-
 .animation .slider__wrap {
   -webkit-animation: show 0.2s linear 1 forwards 2.2s;
           animation: show 0.2s linear 1 forwards 2.2s;
@@ -489,9 +485,21 @@ header .square {
           animation: show-opacity 0.8s 1 forwards 4s;
 }
 
-.animation header .square {
-  -webkit-animation: zindex .1s 1 forwards 6s;
-          animation: zindex .1s 1 forwards 6s;
+.animation header .square__item {
+  -webkit-animation: square-border 1 .2s 1.3s linear forwards;
+          animation: square-border 1 .2s 1.3s linear forwards;
+}
+
+@-webkit-keyframes square-border {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes square-border {
+  100% {
+    opacity: 1;
+  }
 }
 
 .animation header .square__show {
@@ -808,18 +816,6 @@ header .square {
 .header__title path:nth-child(23) {
   fill: none;
   opacity: 0;
-}
-
-@-webkit-keyframes zindex {
-  100% {
-    z-index: 1;
-  }
-}
-
-@keyframes zindex {
-  100% {
-    z-index: 1;
-  }
 }
 
 @-webkit-keyframes show {
