@@ -486,8 +486,8 @@ header .square__item {
 }
 
 .animation header .square__item {
-  -webkit-animation: square-border 1 .2s 1.3s linear forwards;
-          animation: square-border 1 .2s 1.3s linear forwards;
+  -webkit-animation: square-border 1 .2s 1s linear forwards;
+          animation: square-border 1 .2s 1s linear forwards;
 }
 
 @-webkit-keyframes square-border {

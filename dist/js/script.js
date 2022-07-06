@@ -52,31 +52,30 @@ window.addEventListener("load", function() {
   }, 4000);
   const square = this.document.querySelectorAll(".header .square__item")
   const squareLine = this.document.querySelector(".header .square__line")
-  const squareWrap = this.document.querySelector(".header .square")
-
   let num = 0
+  if(this.window.innerWidth > 700){
+    let timerId = setInterval(() => {  
+      squareLineShow(num, squareLine, square)
+      num++
+    }, 25)  
+    setTimeout(() => { clearInterval(timerId)}, 23*25);
+  }
  
-  let timerId = setInterval(() => {  
-    squareLineShow(num, squareLine, square)
-    num++
-  }, 25)
-  setTimeout(() => { clearInterval(timerId); }, 23*25); 
 }) 
-////////////////////////////////////////////////////////////////////
 
 function squareLineShow(num, squareLine, square){
   let timerId = setInterval(() => {  
-    randomSquare(square, num)
+    randomSquare(num, square)
     num += squareLine.children.length
   }, 25);
   setTimeout(() => { clearInterval(timerId); }, 40*25);
 }
-function randomSquare(square, num){
+function randomSquare(num, square){
   square[num].classList.add("square__bg")
   square[num].classList.add("square__show")
   setTimeout(() => square[num].classList.remove("square__bg"), 500);
 }
-
+////////////////////////////////////////////////////////////////////
 
 const swiper2 = new Swiper('.three__right', {
   grabCursor: true,

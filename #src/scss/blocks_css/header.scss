@@ -456,7 +456,7 @@ header .square__item{
     }
     header .square{
         &__item{
-            animation: square-border 1 .2s 1.3s linear forwards;
+            animation: square-border 1 .2s 1s linear forwards;
         }
         @keyframes square-border{
             100%{
