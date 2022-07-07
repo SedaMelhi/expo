@@ -27,3 +27,7 @@ body{
     margin: 0 auto;
     overflow: hidden;
 }
+input:focus{
+    outline: none;
+    border: none;
+}

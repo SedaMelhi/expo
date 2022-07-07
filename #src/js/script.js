@@ -157,3 +157,27 @@ menu_items.forEach(item => item.addEventListener("click", function (e) {
   
   
 }))
+
+
+const form = document.querySelector(".overlay");
+form.style.display = "none";
+const formClose = document.querySelector(".form__close");
+let btn = document.querySelectorAll(".btn")
+btn = new Array(...btn)
+btn = btn.slice(1)
+
+btn.forEach(item => {
+  item.addEventListener("click", function(){
+    form.style.display = "flex";
+    form.classList.remove("overlay__hidden")
+  })
+})
+
+form.addEventListener("click", function(e){
+  if(e.target == form || e.target == formClose || (new Array(...formClose.childNodes).includes(e.target)) || e.target == formClose){
+    form.classList.add("overlay__hidden");
+    setTimeout(() => {form.style.display = "none"}, 500)
+  }
+})
+
+console.log(formClose)

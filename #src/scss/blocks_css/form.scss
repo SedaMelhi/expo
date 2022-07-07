@@ -1,0 +1,126 @@
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: rgba($color: #141414, $alpha: .8);
+    padding: 24px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__hidden{
+        transition: 0.5s;
+        opacity: 0;
+        filter: blur(2px);
+    }
+}
+@keyframes form{
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.form{
+    &__wrap{
+        animation: form 1 .4s ease-out forwards;
+        opacity: 0;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        width: 717px;
+        padding: 42px 80px;
+        font-family: "Poppins";
+        background-color: #141414;
+        box-shadow: 5px 12px 10px #000;
+        display: flex;
+        flex-direction: column;
+        .title{
+            font-size: 2.4rem;
+            margin: 10px 0 40px;
+        }
+    }
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    label{
+        margin-bottom: 12px;
+        font-size: 0.9rem;
+        line-height: 18px;
+        color: #828282;
+    }
+    &__close{
+        width: 30px;
+        cursor: pointer;
+        align-self: flex-end;
+        transition: .3s;
+        position: relative;
+        right: -40px;
+        svg{
+            width: 100%;    
+        }
+    }
+    & input{
+        margin-bottom: 24px;
+        padding: 8px 10px 8px 16px;
+        width: 100%;
+        height: 50px;
+        border: none;
+        color: #fff;
+        font-size: .9rem;
+        background: #181818;    
+    }
+    .form__description{
+        height: 150px;
+        padding: 0;
+        border: none;
+        color: #fff;
+        font-size: .9rem;
+        background: #181818; 
+        padding: 8px 10px 8px 16px;
+        margin-bottom: 24px;
+        width: 100%;
+        resize: none;
+        &:focus{
+            outline: none; 
+        }
+    }
+    .btn{
+        width: 100%;
+        height: 60px;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        line-height: 37px;
+        border: none;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .form{
+        &__wrap{
+            width: 304px;
+            padding: 20px 32px 48px;
+            .title{
+                font-size: 20px;
+            }
+        }
+        &__description{
+            height: 120px;
+            margin-bottom: 24px;
+        }
+        input{
+            height: 37px;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+        label{
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        &__close{
+            right: -10px;
+        }
+    }
+}
