@@ -436,23 +436,23 @@ header .square__item{
         animation: show 0.2s linear 1 forwards 2.2s;
     }
     .nav__wrap{
-        animation: show-nav 1.3s linear 1 forwards 3s;
+        animation: show-nav 1.3s linear 1 forwards 2s;
         border-bottom: 1px solid #24242400;
     }
     .circle{
-        animation: show 0.8s 1 forwards 4s;
+        animation: show 0.8s 1 forwards 3s;
     }
     .blur-block{
-        animation: show 0.8s 1 forwards 4s;
+        animation: show 0.8s 1 forwards 3s;
     }
     .swiper-pagination{
-        animation: show 0.8s 1 forwards 4s;
+        animation: show 0.8s 1 forwards 3s;
     }
     .header__subtitle{
-        animation: show 0.8s 1 forwards 4s;
+        animation: show 0.8s 1 forwards 3s;
     }
     header .btn_mobile{
-        animation: show-opacity 0.8s 1 forwards 4s;
+        animation: show-opacity 0.8s 1 forwards 3s;
     }
     header .square{
         &__item{

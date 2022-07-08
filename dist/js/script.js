@@ -1,5 +1,6 @@
 window.addEventListener("load", function() {
-  AOS.init()
+  AOS.init();
+  this.document.querySelector("body").classList.remove("no-scroll")
   document.querySelector("body").classList.add("animation")
   const swiper = new Swiper('.swiper', {
     pagination:{
@@ -57,8 +58,8 @@ window.addEventListener("load", function() {
     let timerId = setInterval(() => {  
       squareLineShow(num, squareLine, square)
       num++
-    }, 25)  
-    setTimeout(() => { clearInterval(timerId)}, 23*25);
+    }, 18)  
+    setTimeout(() => { clearInterval(timerId)}, 23*18);
   }
  
 }) 
@@ -67,13 +68,13 @@ function squareLineShow(num, squareLine, square){
   let timerId = setInterval(() => {  
     randomSquare(num, square)
     num += squareLine.children.length
-  }, 25);
-  setTimeout(() => { clearInterval(timerId); }, 40*25);
+  }, 18);
+  setTimeout(() => { clearInterval(timerId); }, 40*18);
 }
 function randomSquare(num, square){
   square[num].classList.add("square__bg")
   square[num].classList.add("square__show")
-  setTimeout(() => square[num].classList.remove("square__bg"), 500);
+  setTimeout(() => square[num].classList.remove("square__bg"), 400);
 }
 ////////////////////////////////////////////////////////////////////
 
@@ -160,7 +161,6 @@ menu_items.forEach(item => item.addEventListener("click", function (e) {
 
 
 const form = document.querySelector(".overlay");
-form.style.display = "none";
 const formClose = document.querySelector(".form__close");
 let btn = document.querySelectorAll(".btn")
 btn = new Array(...btn)

@@ -84,6 +84,87 @@ input:focus {
   border: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
+.no-scroll .lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.no-scroll .lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #01346b;
+  -webkit-animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.no-scroll .lds-facebook div:nth-child(1) {
+  left: 8px;
+  -webkit-animation-delay: -0.24s;
+  animation-delay: -0.24s;
+}
+
+.no-scroll .lds-facebook div:nth-child(2) {
+  left: 32px;
+  -webkit-animation-delay: -0.12s;
+  animation-delay: -0.12s;
+}
+
+.no-scroll .lds-facebook div:nth-child(3) {
+  left: 56px;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+}
+
+@-webkit-keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+.no-scroll .load {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 5;
+  background-color: #141414;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -460,34 +541,34 @@ header .square__item {
 }
 
 .animation .nav__wrap {
-  -webkit-animation: show-nav 1.3s linear 1 forwards 3s;
-          animation: show-nav 1.3s linear 1 forwards 3s;
+  -webkit-animation: show-nav 1.3s linear 1 forwards 2s;
+          animation: show-nav 1.3s linear 1 forwards 2s;
   border-bottom: 1px solid #24242400;
 }
 
 .animation .circle {
-  -webkit-animation: show 0.8s 1 forwards 4s;
-          animation: show 0.8s 1 forwards 4s;
+  -webkit-animation: show 0.8s 1 forwards 3s;
+          animation: show 0.8s 1 forwards 3s;
 }
 
 .animation .blur-block {
-  -webkit-animation: show 0.8s 1 forwards 4s;
-          animation: show 0.8s 1 forwards 4s;
+  -webkit-animation: show 0.8s 1 forwards 3s;
+          animation: show 0.8s 1 forwards 3s;
 }
 
 .animation .swiper-pagination {
-  -webkit-animation: show 0.8s 1 forwards 4s;
-          animation: show 0.8s 1 forwards 4s;
+  -webkit-animation: show 0.8s 1 forwards 3s;
+          animation: show 0.8s 1 forwards 3s;
 }
 
 .animation .header__subtitle {
-  -webkit-animation: show 0.8s 1 forwards 4s;
-          animation: show 0.8s 1 forwards 4s;
+  -webkit-animation: show 0.8s 1 forwards 3s;
+          animation: show 0.8s 1 forwards 3s;
 }
 
 .animation header .btn_mobile {
-  -webkit-animation: show-opacity 0.8s 1 forwards 4s;
-          animation: show-opacity 0.8s 1 forwards 4s;
+  -webkit-animation: show-opacity 0.8s 1 forwards 3s;
+          animation: show-opacity 0.8s 1 forwards 3s;
 }
 
 .animation header .square__item {
