@@ -159,10 +159,14 @@ header{
 }
 
 .circle{
+    &__wrap{
+        position: relative;
+    }
     svg{
         width: 137px;
     }
-    left: 20px;
+    top: -15px;
+    left: 0px;
     position: absolute;
 }
 .circle__text{
@@ -231,7 +235,11 @@ header{
         right: -90px;
     }
 }
+
 @media screen and(max-width: 1000px) {
+    header{
+        max-height: 1200px;
+    }
     .blur-block{
         width: 170px;
         height: 93px;
@@ -347,6 +355,7 @@ header{
 @media screen and(max-width: 510px) {
     header{
         min-height: 650px;
+        max-height: 800px;
     }
     .wrap{
         padding-left: 24px;
@@ -480,7 +489,7 @@ header .square__item{
             animation: title-fill 3s 1 ease-out #{$time2 + .7s}   forwards;
         }
     }
-    @for $i from 1 to 40 {
+    @for $i from 1 to 27 {
         @for $j from 1 to 23 {
             .header .square__line:nth-child(#{$i}) .square__item:nth-child(#{$j}){
                 animation: square__bg 1s 1 ease-out #{($j+$i) / 50}s   forwards;
@@ -553,18 +562,7 @@ header .square__item{
 
 
 
-@media screen and (max-width: 650px) {
-    .animation{
-        @for $i from 1 to 40 {
-            @for $j from 1 to 23 {
-                .header .square__line:nth-child(#{$i}) .square__item:nth-child(#{$j}){
-                    animation: square__bg 1s 1 ease-out #{($j+$i) / 60}s   forwards;
-                }
-            }
-        }
-    }
-    
-}
+
 
 @keyframes slider{
     100%{
