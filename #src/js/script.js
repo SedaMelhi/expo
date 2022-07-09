@@ -50,32 +50,10 @@ window.addEventListener("load", function() {
         slide.classList.remove("swiper-slide-first")
       }
     }   
-  }, 4000);
-  const square = this.document.querySelectorAll(".header .square__item")
-  const squareLine = this.document.querySelector(".header .square__line")
-  let num = 0
-  if(this.window.innerWidth > 700){
-    let timerId = setInterval(() => {  
-      squareLineShow(num, squareLine, square)
-      num++
-    }, 18)  
-    setTimeout(() => { clearInterval(timerId)}, 23*18);
-  }
- 
+  }, 4000); 
 }) 
 
-function squareLineShow(num, squareLine, square){
-  let timerId = setInterval(() => {  
-    randomSquare(num, square)
-    num += squareLine.children.length
-  }, 18);
-  setTimeout(() => { clearInterval(timerId); }, 40*18);
-}
-function randomSquare(num, square){
-  square[num].classList.add("square__bg")
-  square[num].classList.add("square__show")
-  setTimeout(() => square[num].classList.remove("square__bg"), 400);
-}
+
 ////////////////////////////////////////////////////////////////////
 
 const swiper2 = new Swiper('.three__right', {

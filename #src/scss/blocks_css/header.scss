@@ -21,7 +21,7 @@ header{
         &:hover{
             transition: .5s ease-out;
             box-shadow: 1px 1px 5px rgba(0, 125, 255, .5);
-            background: rgba(0, 125, 255, .5);
+            background: rgba(0, 125, 255, .3);
         }
         &::before{
             content: "";
@@ -40,7 +40,6 @@ header{
     align-items: center;
     margin: 0 auto;
     &__content{
-    
         display: flex;
         align-items: center;
         position: relative;
@@ -160,11 +159,9 @@ header{
 }
 
 .circle{
-    
     svg{
         width: 137px;
     }
-   
     left: 20px;
     position: absolute;
 }
@@ -454,54 +451,68 @@ header .square__item{
     header .btn_mobile{
         animation: show-opacity 0.8s 1 forwards 3s;
     }
-    header .square{
-        &__item{
-            animation: square-border 1 .2s 1s linear forwards;
-        }
-        @keyframes square-border{
-            100%{
-                opacity: 1;
-            }
-        }
-        &__show{
-            transition: .7s ease-out;
-            opacity: 1;
-        }
-        &__bg{
-            transition: .7s ease-out;
-            box-shadow: 1px 1px 5px rgba(1, 55, 112, 0.5);
-            background: rgba(1, 43, 87, 1);
-        }
-    }
     @for $i from 1 to 16 {
         $n: $i;
-        $time: $i / 35;
+        $time: $i / 40;
         .header__title path:nth-child(#{$n}){
-            animation: title-show .5s 1 ease-out #{$time + .9}s  forwards;
+            animation: title-show .5s 1 ease-out #{$time + .7}s  forwards;
         }
     }
     @for $j from 1 to 9 {
         $num: $j+15;
-        $time2: $j / 35;
+        $time2: $j / 40;
         .header__title path:nth-child(#{$num}){
-            animation: title-show .5s 1 ease-out #{$time2 + 1}s  forwards;
+            animation: title-show .5s 1 ease-out #{$time2 + .7}s  forwards;
         }
     }
     
     @for $j from 1 to 10 {
         $num: $j;
-        $time2: $j / 35;
+        $time2: $j / 40;
         .header__title path:nth-child(#{$num}){
-            animation: title-fill 3s 1 ease-out #{$time2 + .9}s   forwards;
+            animation: title-fill 3s 1 ease-out #{$time2 + .7s}   forwards;
         }
-    }
-    
+    } 
     @for $j from 1 to 6 {
         $num: $j+15;
-        $time2: $j / 35;
+        $time2: $j / 40;
         .header__title path:nth-child(#{$num}){
-            animation: title-fill 3s 1 ease-out #{$time2 + 1}s   forwards;
+            animation: title-fill 3s 1 ease-out #{$time2 + .7s}   forwards;
         }
+    }
+    @for $i from 1 to 40 {
+        @for $j from 1 to 23 {
+            .header .square__line:nth-child(#{$i}) .square__item:nth-child(#{$j}){
+                animation: square__bg 1s 1 ease-out #{($j+$i) / 50}s   forwards;
+            }
+        }
+    }
+    .square{
+        z-index: 3;
+        animation: z-index 1 forwards 0.3s 1.5s;
+    }
+    @keyframes z-index{
+        100%{
+            z-index: 1;
+        }
+    }
+}
+@keyframes square__bg{
+    20%{
+        background: rgba(1, 43, 87, 1);
+    }
+    50%{
+        transition: .7s ease-out;
+        background: rgba(1, 43, 87, 1);
+        box-shadow: 1px 1px 5px rgba(1, 55, 112, 0.5);
+        opacity: 1;
+    }
+    99%{
+        background: rgba(1, 43, 87, 0);
+        box-shadow: 1px 1px 5px rgba(1, 55, 112, 0);
+    }
+    100%{  
+        opacity: 1;
     }
 }
 @for $i from 1 to 24 {
@@ -544,29 +555,15 @@ header .square__item{
 
 @media screen and (max-width: 650px) {
     .animation{
-        @for $j from 8 to 11 {
-            $num: $j;
-            $time2: $j / 35;
-            .header__title path:nth-child(#{$num}){
-                animation: title-fill-mobile .5s 1 ease-out #{$time2 + .9}s  forwards;
-            }
-        }  
-        @for $j from 19 to 22 {
-            $num: $j;
-            $time2: $j / 35;
-            .header__title path:nth-child(#{$num}){
-                animation: title-fill-mobile .5s 1 ease-out #{$time2 + .5}s  forwards;
+        @for $i from 1 to 40 {
+            @for $j from 1 to 23 {
+                .header .square__line:nth-child(#{$i}) .square__item:nth-child(#{$j}){
+                    animation: square__bg 1s 1 ease-out #{($j+$i) / 60}s   forwards;
+                }
             }
         }
     }
-    @keyframes title-fill-mobile{
-        0%{
-            opacity: 0;
-        } 
-        100%{
-            opacity: 1;
-        }
-    }
+    
 }
 
 @keyframes slider{
