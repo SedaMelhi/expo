@@ -318,11 +318,6 @@ header{
     }
 }
 @media screen and(max-width: 610px) {
-    .circle{
-        svg{
-            view-box: 0 0 50px 50px;
-        }
-    }
     .header{
         &__title{
             svg{
@@ -505,6 +500,16 @@ header .square__item{
             z-index: 1;
         }
     }
+}
+@media screen and(max-width: 900px) {
+        .header .square__line .square__item{
+                animation: square-show 1 forwards 0.2s!important;
+        }   
+        @keyframes square-show{
+            100%{
+                opacity: 1;
+            }
+        }
 }
 @keyframes square__bg{
     20%{
