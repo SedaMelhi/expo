@@ -158,4 +158,35 @@ form.addEventListener("click", function(e){
   }
 })
 
-console.log(formClose)
+const swiperTeam = new Swiper('.team__wrap', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  spaceBetween: 24,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  slidesPerView: 5,
+  centeredSlides: true,
+  centeredSlidesBounds: true,
+  breakpoints: {
+    250:{
+      slidesPerView: 1,
+    },
+    500:{
+      slidesPerView: 2,
+    },
+    600:{
+      slidesPerView: 3,
+    },
+    800:{
+      slidesPerView: 4,
+    },
+    1100: {
+      slidesPerView: 5,
+    },
+    
+  }
+});

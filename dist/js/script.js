@@ -8,18 +8,16 @@ window.addEventListener("load", function() {
       clickable: true,
     },
     grabCursor: true,
-    initialSlide: 2,
-    autoplay:{
-      delay: 2000,
-    },
+    initialSlide: 1,
+    autoplay: false,
     loop: true,
-    speed: 700,
+    speed: 900,
     effect: "coverflow",
     cubeEffect: {
       shadow: false,
     },
   })
-  
+  this.setTimeout(() => swiper.slideNext(900, true), 2000)
   const dots = document.querySelectorAll('.swiper-pagination-bullet');
   const activeDot = document.querySelector(".swiper-pagination-bullet-active")
   const activeNum = activeDot.getAttribute("aria-label")[activeDot.getAttribute("aria-label").length-1]
@@ -63,10 +61,10 @@ const swiper2 = new Swiper('.three__right', {
   slidesPerGroup: 1,
   spaceBetween: 16,
   autoplay:{
-    delay: 2000,
+    delay: 2500,
     disableOnInteraction: false,
   },
-  speed: 400,
+  speed: 900,
   effect: "slide",
   loop: true,
   breakpoints: {
@@ -122,17 +120,20 @@ const menu_items = document.querySelectorAll(".menu__item a");
 const menu = document.querySelector(".menu")
 
 menu_items.forEach(item => item.addEventListener("click", function (e) {
-  
-      e.preventDefault();
-      let href = this.getAttribute('href').substring(1);
-      const scrollTarget = document.getElementById(href);
-      const topOffset = menu.offsetHeight;
-      const elementPosition = scrollTarget.getBoundingClientRect().top;
-      const offsetPosition = elementPosition - topOffset;
-      window.scrollBy({
+      let href = this.getAttribute('href');
+      if(href[0] == "#"){
+        e.preventDefault();
+        href = href.substring(1);
+        const scrollTarget = document.getElementById(href);
+        const topOffset = menu.offsetHeight;
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - topOffset;
+        window.scrollBy({
           top: offsetPosition,
           behavior: 'smooth'
-      });
+        });
+      }
+      
   
   
 }))
@@ -158,4 +159,119 @@ form.addEventListener("click", function(e){
   }
 })
 
-console.log(formClose)
+
+
+
+
+
+const module2 = document.querySelector(".opacity__form")
+jQuery(document).ready(function (e) {
+  jQuery('.send-btn').click( function(e) {
+    var form = jQuery(this).closest('form');
+    
+    if ( form.valid() ) {
+     module2.style.display = 'flex';
+      var actUrl = form.attr('action');
+ 
+      jQuery.ajax({
+        url: actUrl,
+        type: 'post',
+        dataType: 'html',
+        data: form.serialize(),
+        success: function(data) {
+          form.html(data);
+          form.css('opacity','1');
+        },
+        error:	 function() {
+             form.find('.status').html('серверная ошибка');
+        }
+      });
+        e.preventDefault()
+    }
+  });
+ });
+const swiperTeam = new Swiper('.team__wrap', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  spaceBetween: 24,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  slidesPerView: 3.5,
+  initialSlide: 2,
+  centeredSlides: true,
+  centeredSlidesBounds: true,
+  breakpoints: {
+    250:{
+      slidesPerView: 1,
+    },
+    500:{
+      slidesPerView: 2,
+    },
+    600:{
+      slidesPerView: 3,
+    },
+    800:{
+      slidesPerView: 3.5,
+    },
+    
+  }
+});
+
+const more = document.querySelector(".button"),
+      projects = document.querySelector(".project__hidden")
+
+more.addEventListener("click", function() {
+  projects.classList.add("project__visible")
+  more.style.display = "none"
+})
+
+
+
+const langRu = document.querySelector(".lang__ru")
+const langEn = document.querySelector(".lang__en")
+
+
+
+
+
+langEn.addEventListener("click", function(){
+  if(langRu.classList.contains("lang__active")){
+    langRu.classList.remove("lang__active")
+  }
+  if(!langEn.classList.contains("lang__active")){
+    langEn.classList.add("lang__active")
+  }
+  changeLanguage('en');
+})
+
+langRu.addEventListener("click", function(){
+  if(langEn.classList.contains("lang__active")){
+    langEn.classList.remove("lang__active")
+  }
+  if(!langRu.classList.contains("lang__active")){
+    langRu.classList.add("lang__active")
+  }
+  changeLanguage('ru');
+})
+
+
+function changeLanguage(hash) {
+  for (let key in langText) {
+      let elems = document.querySelectorAll('.lng-' + key);
+      elems.forEach(elem => {
+        if (elem) {
+          elem.innerHTML = langText[key][hash];
+      }
+
+
+      })
+      
+
+  }
+}
+
+changeLanguage('en');

@@ -423,9 +423,11 @@ header .square__item{
 
 
 
-.blur-block, .swiper-pagination, .circle, .swiper-slide-first, .slider__wrap,
-.header__subtitle{
+.header{
+    .blur-block, .swiper-pagination, .circle, .swiper-slide-first, .slider__wrap,
+    .header__subtitle{
     visibility: hidden;
+}
 }
 .header__title{
     z-index: -1;
